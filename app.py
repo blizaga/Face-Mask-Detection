@@ -48,7 +48,7 @@ async def detect_logo(image: UploadFile = File(...)):
         # Use a list comprehension to convert the class values to class names
         class_names = [labels[val] for val in masks]
 
-        return ResponseModel(class_names, "Logo detection successful")
+        return ResponseModel(class_names, "Mask detection successful")
     
     else:
         return ResponseModel(None, "No image uploaded")
